@@ -1,0 +1,12 @@
+{
+  "name": "browser-ext-node-example",
+  "version": "1.0.0",
+  "description": "Chrome extension that draws ribbon to page corner. Also serves as an example of modern (2021) Node.js project structure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Reza Handzalah <rezahandzalah@gmail.com>",
+  "license": "ISC"
+}
