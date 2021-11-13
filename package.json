@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "Chrome extension that draws ribbon to page corner. Also serves as an example of modern (2021) Node.js project structure.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "snowpack build",
+    "dev": "snowpack build --watch",
+    "check": "npx rome check --review"
   },
   "keywords": [],
   "author": "Reza Handzalah <rezahandzalah@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "rome": "^10.0.4-beta",
+    "snowpack": "^3.8.8"
+  }
 }
