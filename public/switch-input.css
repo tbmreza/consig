@@ -1,0 +1,37 @@
+:root {
+  --height: 18px;
+}
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+label {
+  width: calc(2 * var(--height));
+  height: var(--height);
+  display: block;
+  background-color: #477a85;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0 0 20px #477a8550;
+}
+label::after {
+  content: "";
+  width: calc(0.8 * var(--height));
+  height: calc(0.8 * var(--height));
+  background-color: #e8f5f7;
+  position: absolute;
+  border-radius: 70px;
+  top: calc(0.1 * var(--height));
+  left: calc(0.1 * var(--height));
+  transition: 0.2s;
+}
+input:checked + label:after {
+  left: calc(100% - (calc(0.07 * var(--height))));
+  transform: translateX(-100%);
+}
+input:checked + label {
+  background-color: #243d42;
+}

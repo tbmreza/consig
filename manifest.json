@@ -1,0 +1,23 @@
+{
+  "name": "Hello, World!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "public/popup.html",
+    "default_icon": {
+      "16": "public/images/placeholder16.png",
+      "32": "public/images/placeholder32.png",
+      "48": "public/images/placeholder48.png",
+      "128": "public/images/placeholder128.png"
+    }
+  },
+  "icons": {
+    "16": "public/images/placeholder16.png",
+    "32": "public/images/placeholder32.png",
+    "48": "public/images/placeholder48.png",
+    "128": "public/images/placeholder128.png"
+  }
+}
