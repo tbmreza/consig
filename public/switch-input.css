@@ -10,7 +10,8 @@ label {
   width: calc(2 * var(--height));
   height: var(--height);
   display: block;
-  background-color: #477a85;
+  background-color: gray;
+  border: solid 1px darkslategray;
   border-radius: 100px;
   position: relative;
   cursor: pointer;
@@ -21,7 +22,7 @@ label::after {
   content: "";
   width: calc(0.8 * var(--height));
   height: calc(0.8 * var(--height));
-  background-color: #e8f5f7;
+  background-color: white;
   position: absolute;
   border-radius: 70px;
   top: calc(0.1 * var(--height));
@@ -33,5 +34,6 @@ input:checked + label:after {
   transform: translateX(-100%);
 }
 input:checked + label {
-  background-color: #243d42;
+  background-color: darkslategray;
+  border: solid 1px black;
 }
