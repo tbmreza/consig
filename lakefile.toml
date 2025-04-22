@@ -1,0 +1,10 @@
+name = "consig"
+version = "0.1.0"
+defaultTargets = ["consig"]
+
+[[lean_lib]]
+name = "Consig"
+
+[[lean_exe]]
+name = "consig"
+root = "Main"
