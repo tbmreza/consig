@@ -8,3 +8,7 @@ name = "Consig"
 [[lean_exe]]
 name = "consig"
 root = "Main"
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
