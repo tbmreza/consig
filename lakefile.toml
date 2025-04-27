@@ -11,4 +11,5 @@ root = "Main"
 
 [[require]]
 name = "mathlib"
+version = "git#v4.14.0"
 scope = "leanprover-community"
