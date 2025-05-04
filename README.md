@@ -1,3 +1,5 @@
+![Untitled-2025-05-05-0555](https://github.com/user-attachments/assets/96b74e01-699e-464d-9b29-ef508b36fdb4)
+
 ## Contributing
 The project is in ideation phase. `DRAFT.md` is where I dump my thoughts.
 
@@ -16,3 +18,6 @@ that.
 Given enough time, hypothetically, Lean overtakes Python as the most popular language for scientific
 computing, thanks to SciLean. Consig's ideal future, on the other hand, is when reviewers sometimes ask
 authors of simulation papers of proofs of parts they are not convinced of.
+
+### https://github.com/cpitclaudel/alectryon
+Literate programming for Coq and Lean4.
