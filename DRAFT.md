@@ -29,6 +29,13 @@ theorem Example_3_2_4
   show ¬Q from h4 h2
   done
 
+## Contract programming technique
+A related concept to programming with dependent types is programming with contracts. If, for your use case, runtime violations discovery is good enough and every execution paths of interest for certain does trigger the contract checking, maybe *consider it first before using Consig*.
+
+This [doc] provides comprehensive guide to the concept in Racket where the idea is native to the language. You should be able to perform the technique easily using libraries [in Python]. To my knowledge there's no popular way to do it in Octave, but you can be sure you can make a GPL throw exceptions.
+
+[in Python]: https://github.com/Parquery/icontract
+[doc]: https://docs.racket-lang.org/guide/contract-boundaries.html
 
 ## Never worked with Lean before?
 > Please open an [issue] if you find this section not as excellent as it can be!
