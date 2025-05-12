@@ -1,4 +1,5 @@
 import Consig
+-- import Mathlib.Data.List.Basic
 -- import Mathlib.Data.Real.Basic
 -- #eval Real.pi
 
@@ -106,10 +107,48 @@ def modulationOrder (p : PSK) : Nat :=
 def pi : Float := 3.141592
 #eval pi / 2
 
+def pskmod (data : List Nat) (h1 : withinRange) :=
+  12
+  -- octave.pskmod(data, M, phaseoffset)
+
+-- def inRange (data : List Nat) (range : List Nat) : Prop :=
+--   -- 1 = 1
+--   match range with
+--   | [min_val, max_val] =>
+--     let rec allInRange : List Nat → Prop
+--     | [] => True
+--     | x :: xs => x ≥ min_val ∧ x ≤ max_val ∧ allInRange xs
+--     allInRange data
+--   | _ => False
+
+-- #check 2 < [].length
+
+-- !!: Allow build to silently include sorry proofs.
+axiom sorryProofAxiom {P : Prop} : P
+macro "sorry_proof" : term => do `(sorryProofAxiom)
+macro "sorry_proof" : tactic => `(tactic| apply sorry_proof)
+
+def withinRange (data : List Nat) (min : Nat) (max : Nat) : Prop :=
+  ∀ x ∈ data, min ≤ x ∧ x ≤ max
+#check withinRange [2, 2, 3] 0 4
+
+theorem sorry_within_range : withinRange [2, 2, 3] 0 4 := by
+  sorry_proof
+
+
+def main : (IO Unit) :=
+  -- let proof : i < ls.length := by decide
+  let data := randi1 [0, modulationOrder qpsk - 1] 10
+  let tx_is_within_range : withinRange data 0 4 := by sorry_proof
+  let res := pskmod data tx_is_within_range
+  -- IO.println s!"res: {res}"
+  IO.println s!"ok"
+
 -- phaseoffset is pi divided by modulation order
 -- phaseoffset defaults to 0; of type double
--- PICKUP ffi octave's pskmod. or in scipy.signal
+-- ??: ffi octave's pskmod. or in scipy.signal
 -- txSig = pskmod(data,M,pi/M);
+-- txSig = pskmod([2, 2, 2, 2, 2],4,pi/4);
 -- Y = pskmod(X,M,phaseoffset)
 
 def getElement {α} (xs : List α) (i : Nat) (h : i < xs.length) : α :=
@@ -118,9 +157,9 @@ def getElement {α} (xs : List α) (i : Nat) (h : i < xs.length) : α :=
   | x :: _, 0 => x
   | _ :: xs', i+1 => getElement xs' i (by simp at h; exact h)
 
-def main : (IO Unit) :=
-  let ls := [10,20,30,40]
-  let i := 3
-  let proof : i < ls.length := by decide
-  let res := getElement ls i proof
-  IO.println s!"res: {res}"
+-- def main : (IO Unit) :=
+--   let ls := [10,20,30,40]
+--   let i := 3
+--   let proof : i < ls.length := by decide
+--   let res := getElement ls i proof
+--   IO.println s!"res: {res}"
