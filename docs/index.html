@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The False Promise of Lean in Mathematics</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #b00;
+            border-bottom: 2px solid #b00;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #fff;
+            padding: 20px;
+            border-left: 5px solid #b00;
+            font-style: italic;
+            margin: 20px 0;
+        }
+        a {
+            color: #b00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 60px;
+            font-size: 0.8em;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The False Promise of Lean</h1>
+
+    <p class="highlight">
+        "Mathematics is about ideas. Lean is about type-checking."
+    </p>
+
+    <p>
+        If you are a research mathematician, you have likely been accosted by the "formalization" evangelists.
+        They promise a future where all mathematics is verified by computers, where bugs are impossible, and where AI helps you prove theorems.
+    </p>
+
+    <p><strong>They are lying to you.</strong></p>
+
+    <p>
+        What they are actually selling is a transformation of mathematics from a creative, insight-driven art form into a tedious software engineering task.
+    </p>
+
+    <h2>1. The Death of Intuition</h2>
+    <p>
+        In Lean, you do not manipulate mathematical objects; you manipulate syntax. The deep geometric or algebraic intuition that guides a proof is lost in a sea of tactics, type class resolutions, and implicit arguments.
+        You stop thinking "why is this true?" and start thinking "how do I make the red squiggly line go away?"
+    </p>
+    <p>
+        You spend hours fighting the 'simplifier' because it decided to unfold a definition you wanted to keep abstract.
+        You are not doing math; you are debugging a compiler error for a language that wasn't designed for humans.
+    </p>
+
+    <h2>2. The Unreadable Scroll</h2>
+    <p>
+        A mathematical proof is meant to be read. It communicates understanding from one human to another.
+        A Lean file is a write-only cryptographic hash of a proof. It is unreadable. It explains nothing.
+        It verifies, but it does not illuminate.
+    </p>
+    <p>
+        Have you ever tried to "read" a formalized proof in Mathlib? It is a sequence of incantations: <code>simp</code>, <code>rw</code>, <code>apply</code>.
+        Without the interactive state of the editor, it is meaningless noise. We are building a library of Babel that no one can read.
+    </p>
+
+    <h2>3. The Versioning Treadmill</h2>
+    <p>
+        Mathematics is eternal. Euclidean geometry is as valid today as it was 2000 years ago.
+        Lean code rots in months. The transition from Lean 3 to Lean 4 broke everything.
+        Do you want your life's work to become a compile error next year?
+    </p>
+    <p>
+        They call it "progress." We call it planned obsolescence.
+        If your proof depends on a specific version of a software library to be considered "true," is it really a mathematical truth?
+    </p>
+
+    <h2>4. The "AI" Delusion</h2>
+    <p>
+        "But AI will automate it!" This is the carrot on the stick.
+        They want <em>you</em> to do the grunt work of formalizing libraries so they can train their models.
+        You are not a mathematician to them; you are a data labeler.
+    </p>
+
+    <h2>Stop Wasting Your Time</h2>
+    <p>
+        Go back to your blackboard. Write proofs that humans can read. Leave the type-checking to the programmers.
+    </p>
+
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://alanhdu.github.io/posts/2020-01-20-a-few-thoughts-on-lean/">A Few Thoughts on the Lean Theorem Prover</a> - An honest account of someone abandoning Lean after realizing the overhead.</li>
+        <li><a href="https://mathoverflow.net/questions/36676/why-is-formal-proof-so-hard">Why is formal proof so hard?</a> (MathOverflow) - See the skeptical takes on the sheer effort required vs. the reward.</li>
+        <li><a href="https://github.com/lecopivo/SciLean">SciLean</a> - Even those trying to make it work for science admit it "jumps perhaps a bit rashly on the Lean train."</li>
+    </ul>
+
+    <div class="highlight" style="border-left-color: #555;">
+        <h3>A Sensible Alternative?</h3>
+        <p>
+            This website is hosted by the <strong>Consig</strong> project. Unlike the formalization maximalists, we believe in using tools where they make sense.
+            We don't want to rewrite the universe. We respect that scientists use Python and Octave.
+            We only ask for verification where it matters—when reviewers are unconvinced.
+            <br><br>
+            <a href="https://github.com/consig/consig">Check out the Consig repository</a>
+        </p>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Consig Project.
+    </div>
+
+</body>
+</html>
